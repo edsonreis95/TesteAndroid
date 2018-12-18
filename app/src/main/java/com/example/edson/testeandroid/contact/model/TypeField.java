@@ -1,9 +1,9 @@
 package com.example.edson.testeandroid.contact.model;
 
 public enum TypeField {
-    text(1),
-    telNumber(2),
-    email(3);
+    TEXT(1),
+    TEL_NUMBER(2),
+    EMAIL(3);
 
     private Object value;
 

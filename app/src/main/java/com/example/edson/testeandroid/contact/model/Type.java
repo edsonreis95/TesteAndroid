@@ -1,11 +1,11 @@
 package com.example.edson.testeandroid.contact.model;
 
 public enum Type {
-    field(1),
-    text(2),
-    image(3),
-    checkbox(4),
-    send(5);
+    FIELD(1),
+    TEXT(2),
+    IMAGE(3),
+    CHECKBOX(4),
+    SEND(5);
 
     private int value;
 

@@ -7,13 +7,14 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class SantanderServiceFactory {
+public class ServiceFactory {
 
-    public static SantanderApi createSantanderService(String URL){
+    public static Retrofit createService(String URL){
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -34,6 +35,6 @@ public class SantanderServiceFactory {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client);
 
-        return retroBuilder.build().create(SantanderApi.class);
+        return retroBuilder.build();
     }
 }
