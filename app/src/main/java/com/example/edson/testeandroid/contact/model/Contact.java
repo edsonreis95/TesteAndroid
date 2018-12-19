@@ -11,7 +11,7 @@ public class Contact {
     @SerializedName("message")
     String message;
     @SerializedName("typefield")
-    Integer typefield;
+    Object typefield;
     @SerializedName("hidden")
     Boolean hidden;
     @SerializedName("topSpacing")
@@ -45,7 +45,7 @@ public class Contact {
         this.message = message;
     }
 
-    public Integer getTypefield() {
+    public Object getTypefield() {
         return typefield;
     }
 

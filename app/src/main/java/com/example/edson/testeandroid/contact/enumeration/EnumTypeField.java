@@ -1,13 +1,13 @@
-package com.example.edson.testeandroid.contact.model;
+package com.example.edson.testeandroid.contact.enumeration;
 
-public enum TypeField {
+public enum EnumTypeField {
     TEXT(1),
     TEL_NUMBER(2),
     EMAIL(3);
 
     private Object value;
 
-    TypeField(Object value) {
+    EnumTypeField(Object value) {
         this.value = value;
     }
 

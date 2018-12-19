@@ -1,6 +1,6 @@
 package com.example.edson.testeandroid.base;
 
-public interface IBaseView{
+public interface IBaseFragmentView {
 
     void showProgress();
     void hideProgress();

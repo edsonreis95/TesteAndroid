@@ -1,4 +1,8 @@
 package com.example.edson.testeandroid.base;
 
-public class BaseActivity {
+import android.support.v7.app.AppCompatActivity;
+
+public class BaseActivity extends AppCompatActivity implements IBaseActivityView {
+
 }
+

@@ -10,7 +10,7 @@ public class Fund {
     private String title;
     @SerializedName("fundName")
     private String fundName;
-    @SerializedName("whatIa")
+    @SerializedName("whatIs")
     private String whatIs;
     @SerializedName("definition")
     private String definition;

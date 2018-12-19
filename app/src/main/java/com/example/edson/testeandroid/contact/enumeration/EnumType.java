@@ -1,6 +1,6 @@
-package com.example.edson.testeandroid.contact.model;
+package com.example.edson.testeandroid.contact.enumeration;
 
-public enum Type {
+public enum EnumType {
     FIELD(1),
     TEXT(2),
     IMAGE(3),
@@ -9,7 +9,7 @@ public enum Type {
 
     private int value;
 
-    Type(int value) {
+    EnumType(int value) {
         this.value = value;
     }
 
