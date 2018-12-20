@@ -8,6 +8,8 @@ public class MoreInfo {
     MoreInfoDetail month;
     @SerializedName("year")
     MoreInfoDetail year;
+    @SerializedName("12months")
+    MoreInfoDetail months12;
 
     public MoreInfoDetail getMonth() {
         return month;
@@ -33,6 +35,4 @@ public class MoreInfo {
         this.months12 = months12;
     }
 
-    @SerializedName("12month")
-    MoreInfoDetail months12;
 }

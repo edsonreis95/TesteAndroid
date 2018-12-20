@@ -24,7 +24,7 @@ public class Fund {
     private MoreInfo moreInfo;
     @SerializedName("info")
     private List<Info> info;
-    @SerializedName("downinfo")
+    @SerializedName("downInfo")
     private List<DownInfo> downInfo;
 
     public String getTitle() {

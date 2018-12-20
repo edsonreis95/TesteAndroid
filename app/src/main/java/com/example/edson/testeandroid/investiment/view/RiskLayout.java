@@ -1,4 +1,4 @@
-package com.example.edson.testeandroid.ui.investiment;
+package com.example.edson.testeandroid.investiment.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;

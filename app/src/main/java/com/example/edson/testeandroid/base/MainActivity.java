@@ -5,6 +5,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.edson.testeandroid.R;
@@ -16,6 +18,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
+    @BindView(R.id.ivUpload)
+    protected ImageView ivUpload;
     @BindView(R.id.tabLayout)
     protected TabLayout tabLayout;
     @BindView(R.id.viewPager)
@@ -55,6 +59,11 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 tvTitleToolbar.setText(adapter.getPageTitle(position));
+                if (position == 0){
+                    ivUpload.setVisibility(View.VISIBLE);
+                }else {
+                    ivUpload.setVisibility(View.INVISIBLE);
+                }
             }
 
             @Override

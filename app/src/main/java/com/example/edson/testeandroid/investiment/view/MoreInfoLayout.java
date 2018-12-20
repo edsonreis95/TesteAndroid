@@ -1,4 +1,4 @@
-package com.example.edson.testeandroid.ui.investiment;
+package com.example.edson.testeandroid.investiment.view;
 
 import android.content.Context;
 import android.support.constraint.ConstraintLayout;
@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import com.example.edson.testeandroid.R;
 import com.example.edson.testeandroid.investiment.model.FundResponse;
-import com.example.edson.testeandroid.investiment.model.MoreInfo;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +28,6 @@ public class MoreInfoLayout extends ConstraintLayout {
     @BindView(R.id.tvCdiMonth12)
     TextView tvCdiMonth12;
 
-
     public MoreInfoLayout(Context context, FundResponse response) {
         super(context);
 
@@ -42,7 +40,7 @@ public class MoreInfoLayout extends ConstraintLayout {
         setFundMonth(response.getScreen().getMoreInfo().getMonth().getFund());
         setCdiMonth(response.getScreen().getMoreInfo().getMonth().getCDI());
         setFundYear(response.getScreen().getMoreInfo().getYear().getFund());
-        //setCdiYear(response.getScreen().getMoreInfo().getYear().getCDI());
+        setCdiYear(response.getScreen().getMoreInfo().getYear().getCDI());
         setFundMonth12(response.getScreen().getMoreInfo().getMonths12().getFund());
         setCdiMonth12(response.getScreen().getMoreInfo().getMonths12().getCDI());
     }

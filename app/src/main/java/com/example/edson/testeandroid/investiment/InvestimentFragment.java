@@ -5,14 +5,18 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.edson.testeandroid.CustomButton;
 import com.example.edson.testeandroid.R;
 import com.example.edson.testeandroid.base.BaseFragment;
 import com.example.edson.testeandroid.investiment.model.FundResponse;
-import com.example.edson.testeandroid.ui.investiment.HeaderLayout;
-import com.example.edson.testeandroid.ui.investiment.MoreInfoLayout;
-import com.example.edson.testeandroid.ui.investiment.RiskLayout;
+import com.example.edson.testeandroid.investiment.view.DownInfoLayout;
+import com.example.edson.testeandroid.investiment.view.HeaderLayout;
+import com.example.edson.testeandroid.investiment.view.InfoLayout;
+import com.example.edson.testeandroid.investiment.view.MoreInfoLayout;
+import com.example.edson.testeandroid.investiment.view.RiskLayout;
 import com.example.edson.testeandroid.utils.ConnectionUtils;
 
 import butterknife.BindView;
@@ -55,7 +59,32 @@ public class InvestimentFragment extends BaseFragment implements IInvestimentVie
         lnInvestiment.addView(new HeaderLayout(getContext(), response));
         lnInvestiment.addView(new RiskLayout(getContext(), response));
         lnInvestiment.addView(new MoreInfoLayout(getContext(), response));
-        //new InfoLayout(response.getScreen().getInfo());
-        //new DownInfoLayout(response.getScreen().getDownInfo());
+        lnInvestiment.addView(new InfoLayout(getContext(), response));
+        lnInvestiment.addView(new DownInfoLayout(getContext(), response));
+        lnInvestiment.addView(createCustomButtom());
+
+    }
+
+    @Override
+    public Button createCustomButtom() {
+        return new CustomButton(getContext())
+                .newInstance()
+                .setText("Investir")
+                .setTextColor(getContext().getResources().getColor(R.color.white))
+                .setTextSize(16)
+                .isAllCaps(false)
+                .setBackgroundColor(R.drawable.button_selector)
+                .setListener(onClicButtonInvestiment())
+                .create();
+    }
+
+    @Override
+    public View.OnClickListener onClicButtonInvestiment() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showToastMessage("Investido");
+            }
+        };
     }
 }

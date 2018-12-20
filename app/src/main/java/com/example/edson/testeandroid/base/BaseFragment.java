@@ -1,6 +1,5 @@
 package com.example.edson.testeandroid.base;
 
-import android.app.ProgressDialog;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.ProgressBar;
