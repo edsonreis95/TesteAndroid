@@ -2,7 +2,7 @@ package com.example.edson.testeandroid.contact.enumeration;
 
 public enum EnumTypeField {
     TEXT(1),
-    TEL_NUMBER(2),
+    TEL_NUMBER("telnumber"),
     EMAIL(3);
 
     private Object value;
