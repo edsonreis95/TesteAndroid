@@ -4,6 +4,7 @@ import com.example.edson.testeandroid.webservice.EnumConnection;
 
 public class ConnectionUtils {
 
+
     public static final String getConnectionMessageError(int errorCode) {
 
         if (errorCode == EnumConnection.STATUS_OK.getValue()){
